@@ -1,27 +1,8 @@
 import mongoose from "mongoose"
 
-// const videoSchema = new mongoose.Schema({
-//     imgUrl: {
-//         type: String,
-//         required: true
-//     },
-//     videoUrl: {
-//         type: String,
-//         required: true
-//     }
-// }, {
-//     timestamps: true
-//  }
-// );
-
-const videoSchema = new mongoose.Schema({
-    videoUrl: {
+const imageSchema = new mongoose.Schema({
+    imageUrl: {
         type: String,
-        required: true
-    },
-    mediaType: {
-        type: String,
-        enum: ['video', 'image'],
         required: true
     },
     gender: {
@@ -43,4 +24,4 @@ const videoSchema = new mongoose.Schema({
  }
 );
 
-export default mongoose.model("Video", videoSchema);
+export default mongoose.model("Image", imageSchema);
